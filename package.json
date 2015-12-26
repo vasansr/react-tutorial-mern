@@ -1,0 +1,27 @@
+{
+  "name": "react-tutorial-mern",
+  "version": "1.0.0",
+  "description": "React Tutorial using MERN stack",
+  "main": "webapp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasansr/react-tutorial-mern.git"
+  },
+  "keywords": [
+    "react",
+    "tutorial",
+    "MERN"
+  ],
+  "author": "Vasan Subramanian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vasansr/react-tutorial-mern/issues"
+  },
+  "homepage": "https://github.com/vasansr/react-tutorial-mern#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

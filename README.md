@@ -15,3 +15,6 @@ here once I am done publishing that story.
 ### 1.1 index.html as a file
 Create index.html as a file, use all scripts (react, react-dom, babel) from CDN.
 Write a Hello World element within the HTML between `<script>` tags.
+
+### 1.2 Serve it up
+Use Node and Express to serve the HTML file.
