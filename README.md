@@ -35,4 +35,6 @@ Start building a simple CRUD app.
 Use React.createClass to create a class and render it instead of rendering
 a DOM element directly in ReactDOM.render().
 
+### 3.2 Compose
+Create a component by using other components.
 
