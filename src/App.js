@@ -1,5 +1,13 @@
+var BugList = React.createClass({
+  render: function() {
+    return (
+      <div>The bug list would come here.</div>
+    )
+  }
+});
+
 ReactDOM.render(
-  <div>Hello, world!</div>,
-  document.getElementById('example')
+  <BugList />,
+  document.getElementById('main')
 );
 

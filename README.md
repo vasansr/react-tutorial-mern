@@ -27,3 +27,12 @@ Split JSX and HTML into separate files.
 
 ### 2.2 Manual transform
 Serve a transformed JSX rather than the JSX itself.
+
+## 3. Compose Components
+Start building a simple CRUD app.
+
+### 3.1 Use React.createClass
+Use React.createClass to create a class and render it instead of rendering
+a DOM element directly in ReactDOM.render().
+
+
