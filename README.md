@@ -24,3 +24,6 @@ Transform the JSX into JS at build-time rather than at run-time.
 
 ### 2.1 Split HTML and JSX
 Split JSX and HTML into separate files.
+
+### 2.2 Manual transform
+Serve a transformed JSX rather than the JSX itself.
