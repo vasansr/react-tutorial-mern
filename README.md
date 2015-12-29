@@ -40,3 +40,7 @@ Create a component by using other components.
 
 ### 3.3 Communicate
 Communicate between components using props
+
+### 3.4 Dynamic composition
+Create multiple components dynamically based on data
+
