@@ -38,3 +38,5 @@ a DOM element directly in ReactDOM.render().
 ### 3.2 Compose
 Create a component by using other components.
 
+### 3.3 Communicate
+Communicate between components using props
