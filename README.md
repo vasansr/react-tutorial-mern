@@ -44,3 +44,8 @@ Communicate between components using props
 ### 3.4 Dynamic composition
 Create multiple components dynamically based on data
 
+## 4. Dynamic Updates
+Dynamically update the data model and re-render.
+
+### 4.1 Create initial state
+Start using state, prepare for dynamic updates.
