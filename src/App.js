@@ -62,6 +62,7 @@ var BugList = React.createClass({
     return {bugs: bugData};
   },
   render: function() {
+    console.log("Rendering bug list, num items:", this.state.bugs.length);
     return (
       <div>
         <h1>Bug Tracker</h1>
@@ -76,7 +77,8 @@ var BugList = React.createClass({
   },
 
   testNewBug: function() {
-    this.addBug({id: 3, priority: 'P2', status:'New', owner:'Pieta', title:'Warning on console'})
+    var nextId = this.state.bugs.length + 1;
+    this.addBug({id: nextId, priority: 'P2', status:'New', owner:'Pieta', title:'Warning on console'})
   },
 
   addBug: function(bug) {
