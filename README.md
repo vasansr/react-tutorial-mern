@@ -49,3 +49,7 @@ Dynamically update the data model and re-render.
 
 ### 4.1 Create initial state
 Start using state, prepare for dynamic updates.
+
+### 4.2 Update state
+Dynamically update the state and see the magic.
+

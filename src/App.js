@@ -68,10 +68,23 @@ var BugList = React.createClass({
         <BugFilter />
         <hr />
         <BugTable bugs={this.state.bugs}/>
+        <button onClick={this.testNewBug}>Add Bug</button>
         <hr />
         <BugAdd />
       </div>
     )
+  },
+
+  testNewBug: function() {
+    this.addBug({id: 3, priority: 'P2', status:'New', owner:'Pieta', title:'Warning on console'})
+  },
+
+  addBug: function(bug) {
+    console.log("Adding bug:", bug);
+    // We're advised not to modify the state, it's immutable. So, make a copy.
+    var bugsModified = this.state.bugs.slice();
+    bugsModified.push(bug);
+    this.setState({bugs: bugsModified});
   }
 });
 
