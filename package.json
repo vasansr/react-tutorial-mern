@@ -24,6 +24,7 @@
   "dependencies": {
     "babel-preset-react": "^6.3.13",
     "body-parser": "^1.14.2",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "mongodb": "^2.1.2"
   }
 }

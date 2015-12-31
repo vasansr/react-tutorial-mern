@@ -77,3 +77,6 @@ Persist the data in a database.
 ### 6.1 Initialize
 Write a script to initialize a MongoDB collection.
 
+### 6.2 Connect and Read
+Create a permanent connection to the DB, change GET API to read from DB.
+
