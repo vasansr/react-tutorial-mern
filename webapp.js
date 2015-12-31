@@ -9,7 +9,7 @@ var bugData = [
   {id: 2, priority: 'P2', status:'New', owner:'Eddie', title:'Misaligned border on panel'}
 ];
 
-app.use('/api/bugs', function(req, res) {
+app.get('/api/bugs', function(req, res) {
   res.status(200).send(JSON.stringify(bugData));
 });
 
