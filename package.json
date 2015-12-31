@@ -25,6 +25,9 @@
     "babel-preset-react": "^6.3.13",
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
-    "mongodb": "^2.1.2"
+    "jquery": "^2.1.4",
+    "mongodb": "^2.1.2",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5"
   }
 }
