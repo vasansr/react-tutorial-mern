@@ -64,3 +64,7 @@ Implement a GET API on the server to return a list of records.
 
 ### 5.2 POST API
 Implement a POST API to add a new record.
+
+### 5.3 Use the GET API
+Change client code to fetch data from server.
+
