@@ -71,3 +71,9 @@ Change client code to fetch data from server.
 ### 5.4 Use the POST API
 Change client code to send data to server for Add record.
 
+## 6. Save to database
+Persist the data in a database.
+
+### 6.1 Initialize
+Write a script to initialize a MongoDB collection.
+
