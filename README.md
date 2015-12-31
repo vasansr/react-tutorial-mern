@@ -80,3 +80,6 @@ Write a script to initialize a MongoDB collection.
 ### 6.2 Connect and Read
 Create a permanent connection to the DB, change GET API to read from DB.
 
+### 6.3 Write to DB
+Change POST API to insert a record into the DB.
+
