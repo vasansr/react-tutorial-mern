@@ -61,3 +61,6 @@ Move data to the server.
 
 ### 5.1 GET API
 Implement a GET API on the server to return a list of records.
+
+### 5.2 POST API
+Implement a POST API to add a new record.
