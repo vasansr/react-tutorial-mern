@@ -68,3 +68,6 @@ Implement a POST API to add a new record.
 ### 5.3 Use the GET API
 Change client code to fetch data from server.
 
+### 5.4 Use the POST API
+Change client code to send data to server for Add record.
+
