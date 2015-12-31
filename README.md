@@ -83,3 +83,11 @@ Create a permanent connection to the DB, change GET API to read from DB.
 ### 6.3 Write to DB
 Change POST API to insert a record into the DB.
 
+## 7. Build and Bundle
+Modularize, use browserify to serve a bundle of all scripts.
+
+### 7.1 browserify
+Use browserify to create a bundle manually.
+
+### 7.2 Automate with gulp
+Use gulp to automate the manual tasks.

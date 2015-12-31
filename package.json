@@ -23,11 +23,15 @@
   "homepage": "https://github.com/vasansr/react-tutorial-mern#readme",
   "dependencies": {
     "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
     "body-parser": "^1.14.2",
+    "browserify": "^12.0.1",
     "express": "^4.13.3",
+    "gulp": "^3.9.0",
     "jquery": "^2.1.4",
     "mongodb": "^2.1.2",
     "react": "^0.14.5",
-    "react-dom": "^0.14.5"
+    "react-dom": "^0.14.5",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
