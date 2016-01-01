@@ -108,3 +108,6 @@ Modify GET API to handle a query string with filters.
 
 ### 8.2 Hardcoded filter
 Create a button that filters the list, using a hardcoded filter.
+
+### 8.3 Filter form
+Create a form with controlled components and use state.
