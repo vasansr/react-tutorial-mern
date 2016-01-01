@@ -106,3 +106,5 @@ Split the single source file into multiple.
 ### 8.1 Modify GET API
 Modify GET API to handle a query string with filters.
 
+### 8.2 Hardcoded filter
+Create a button that filters the list, using a hardcoded filter.
