@@ -120,3 +120,6 @@ Install React Router and build the first few routes.
 
 ### 9.2 URL parameters
 Use URL parameters to initialize the filter.
+
+### 9.3 Filter change
+Propagate a filter change to the bug list *and* the URL.
