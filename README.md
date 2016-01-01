@@ -97,3 +97,6 @@ Use watchify to watch the source file for changes and auto-build.
 
 ### 7.4 Error handling
 Log errors in the source file while watching.
+
+### 7.5 Modularize
+Split the single source file into multiple.
