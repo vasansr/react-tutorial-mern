@@ -126,3 +126,9 @@ Propagate a filter change to the bug list *and* the URL.
 
 ### 9.4 Component Lifecycle
 Listen to URL changes, reload the records and re-render the filter UI.
+
+## 10. Edit page
+Add a new view / page that let's us edit a record.
+
+### 10.1 GET record API
+Add a GET API to get a single record.

@@ -1,12 +1,14 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
+var ObjectId = require('mongodb').ObjectID;
 
 var app = express();
 var db;
 
 app.use(express.static('static'));
 
+/* Get a list of filtered records */
 app.get('/api/bugs', function(req, res) {
   console.log("Query string", req.query);
   var filter = {};
@@ -21,6 +23,8 @@ app.get('/api/bugs', function(req, res) {
 });
 
 app.use(bodyParser.json());
+
+/* Insert a record */
 app.post('/api/bugs/', function(req, res) {
   console.log("Req body:", req.body);
   var newBug = req.body;
@@ -29,6 +33,13 @@ app.post('/api/bugs/', function(req, res) {
     db.collection("bugs").find({_id: newId}).next(function(err, doc) {
       res.json(doc);
     });
+  });
+});
+
+/* Get a single record */
+app.get('/api/bugs/:id', function(req, res) {
+  db.collection("bugs").findOne({_id: ObjectId(req.params.id)}, function(err, bug) {
+    res.json(bug);
   });
 });
 
