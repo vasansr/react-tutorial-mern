@@ -100,3 +100,9 @@ Log errors in the source file while watching.
 
 ### 7.5 Modularize
 Split the single source file into multiple.
+
+## 8. Filtering
+
+### 8.1 Modify GET API
+Modify GET API to handle a query string with filters.
+
