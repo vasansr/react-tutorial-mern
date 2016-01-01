@@ -43,6 +43,18 @@ app.get('/api/bugs/:id', function(req, res) {
   });
 });
 
+/* Modify one record, given its ID */
+app.put('/api/bugs/:id', function(req, res) {
+  var bug = req.body;
+  console.log("Modifying bug:", req.params.id, bug);
+  var oid = ObjectId(req.params.id);
+  db.collection("bugs").updateOne({_id: oid}, bug, function(err, result) {
+    db.collection("bugs").find({_id: oid}).next(function(err, doc) {
+      res.send(doc);
+    });
+  });
+});
+
 MongoClient.connect('mongodb://localhost/bugsdb', function(err, dbConnection) {
   db = dbConnection;
   var server = app.listen(3000, function() {

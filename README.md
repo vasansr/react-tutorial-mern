@@ -132,3 +132,6 @@ Add a new view / page that let's us edit a record.
 
 ### 10.1 GET record API
 Add a GET API to get a single record.
+
+### 10.2 PUT API
+Add a PUT API to modify a single record.
