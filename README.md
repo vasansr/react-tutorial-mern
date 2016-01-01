@@ -111,3 +111,9 @@ Create a button that filters the list, using a hardcoded filter.
 
 ### 8.3 Filter form
 Create a form with controlled components and use state.
+
+## 9. Routing
+Use routing to handle different page views and query string.
+
+### 9.1 React Router
+Install React Router and build the first few routes.
