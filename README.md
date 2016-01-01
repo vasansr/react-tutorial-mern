@@ -117,3 +117,6 @@ Use routing to handle different page views and query string.
 
 ### 9.1 React Router
 Install React Router and build the first few routes.
+
+### 9.2 URL parameters
+Use URL parameters to initialize the filter.

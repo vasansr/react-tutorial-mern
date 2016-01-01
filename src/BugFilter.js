@@ -29,7 +29,8 @@ var BugFilter = React.createClass({
   },
 
   getInitialState: function() {
-    return {status: "", priority: ""};
+    var initFilter = this.props.initFilter;
+    return {status: initFilter.status, priority: initFilter.priority};
   },
 
   onChangeStatus: function(e) {
