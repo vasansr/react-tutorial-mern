@@ -123,3 +123,6 @@ Use URL parameters to initialize the filter.
 
 ### 9.3 Filter change
 Propagate a filter change to the bug list *and* the URL.
+
+### 9.4 Component Lifecycle
+Listen to URL changes, reload the records and re-render the filter UI.

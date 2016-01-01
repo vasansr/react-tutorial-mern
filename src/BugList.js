@@ -7,7 +7,7 @@ var BugAdd = require('./BugAdd');
 
 var BugRow = React.createClass({
   render: function() {
-    console.log("Rendering BugRow:", this.props.bug);
+    //console.log("Rendering BugRow:", this.props.bug);
     return (
       <tr>
         <td>{this.props.bug._id}</td>
@@ -22,7 +22,7 @@ var BugRow = React.createClass({
 
 var BugTable = React.createClass({
   render: function() {
-    console.log("Rendering bug table, num items:", this.props.bugs.length);
+    //console.log("Rendering bug table, num items:", this.props.bugs.length);
     var bugRows = this.props.bugs.map(function(bug) {
       return <BugRow key={bug._id} bug={bug} />
     });
@@ -50,7 +50,7 @@ var BugList = React.createClass({
     return {bugs: []};
   },
   render: function() {
-    console.log("Rendering bug list, num items:", this.state.bugs.length);
+    console.log("Rendering BugList, num items:", this.state.bugs.length);
     return (
       <div>
         <h1>Bug Tracker</h1>
@@ -64,10 +64,27 @@ var BugList = React.createClass({
   },
 
   componentDidMount: function() {
-    this.loadData({});
+    console.log("BugList: componentDidMount");
+    this.loadData();
   },
 
-  loadData: function(filter) {
+  componentDidUpdate: function(prevProps) {
+    var oldQuery = prevProps.location.query;
+    var newQuery = this.props.location.query;
+    if (oldQuery.priority === newQuery.priority &&
+        oldQuery.status === newQuery.status) {
+      console.log("BugList: componentDidUpdate, no change in filter, not updating");
+      return;
+    } else {
+      console.log("BugList: componentDidUpdate, loading data with new filter");
+      this.loadData();
+    }
+  },
+
+  loadData: function() {
+    var query = this.props.location.query || {};
+    var filter = {priority: query.priority, status: query.status};
+
     $.ajax('/api/bugs', {data: filter}).done(function(data) {
       this.setState({bugs: data});
     }.bind(this));
@@ -76,7 +93,6 @@ var BugList = React.createClass({
 
   changeFilter: function(newFilter) {
     this.props.history.push({search: '?' + $.param(newFilter)});
-    this.loadData(newFilter);
   },
 
   addBug: function(bug) {
