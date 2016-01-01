@@ -94,3 +94,6 @@ Use gulp to automate the manual tasks.
 
 ### 7.3 Watchify
 Use watchify to watch the source file for changes and auto-build.
+
+### 7.4 Error handling
+Log errors in the source file while watching.
