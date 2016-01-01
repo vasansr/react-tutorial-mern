@@ -91,3 +91,6 @@ Use browserify to create a bundle manually.
 
 ### 7.2 Automate with gulp
 Use gulp to automate the manual tasks.
+
+### 7.3 Watchify
+Use watchify to watch the source file for changes and auto-build.
