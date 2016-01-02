@@ -135,3 +135,6 @@ Add a GET API to get a single record.
 
 ### 10.2 PUT API
 Add a PUT API to modify a single record.
+
+### 10.3 New route and page
+Create a new route and a new page for editing a record.
