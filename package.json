@@ -30,10 +30,12 @@
     "gulp": "^3.9.0",
     "history": "^1.17.0",
     "jquery": "^2.1.4",
+    "material-ui": "^0.14.0",
     "mongodb": "^2.1.2",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
     "react-router": "^1.0.3",
+    "react-tap-event-plugin": "^0.2.1",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.6.1"
   }

@@ -1,5 +1,10 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var injectTapEventPlugin = require('react-tap-event-plugin');
+
+var RaisedButton = require('material-ui/lib/raised-button');
+
+injectTapEventPlugin();
 
 var BugFilter = React.createClass({
   render: function() {
@@ -23,7 +28,7 @@ var BugFilter = React.createClass({
           <option value="P3">P3</option>
         </select>
         <br/>
-        <button onClick={this.submit}>Apply</button>
+        <RaisedButton label="Apply" onTouchTap={this.submit} />
       </div>
     )
   },
