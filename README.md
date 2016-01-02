@@ -138,3 +138,6 @@ Add a PUT API to modify a single record.
 
 ### 10.3 New route and page
 Create a new route and a new page for editing a record.
+
+### 10.4 Links
+Create links from and to the two pages.
