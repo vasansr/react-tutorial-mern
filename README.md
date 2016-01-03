@@ -156,3 +156,6 @@ Convert the Bug Add form to Material UI.
 
 ### 11.b.4 Table
 Convert the Bug Table to Material UI.
+
+### 11.b.5 Edit Form
+Convert the Bug Edit form to Material UI.
