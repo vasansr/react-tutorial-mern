@@ -3,40 +3,49 @@ var ReactDOM = require('react-dom');
 var $ = require('jquery');
 var Link = require('react-router').Link;
 
+var Panel = require('react-bootstrap/lib/Panel');
+var Input = require('react-bootstrap/lib/Input');
+var Button  = require('react-bootstrap/lib/Button');
+var ButtonToolbar = require('react-bootstrap/lib/ButtonToolbar');
+var Alert = require('react-bootstrap/lib/Alert');
+
 var BugEdit = React.createClass({
   render: function() {
+    var success = (
+      <Alert bsStyle="success" onDismiss={this.dismissSuccess} dismissAfter={5000}>
+        Bug saved to DB successfully.
+      </Alert>
+    );
     return (
-      <div>
-        Edit bug: {this.props.params.id}
-        <br/>
-        <form onSubmit={this.submit}>
-          Priority:
-          <select name="priority" value={this.state.priority} onChange={this.onChangePriority}>
-            <option value="P1">P1</option>
-            <option value="P2">P2</option>
-            <option value="P3">P3</option>
-          </select>
-          <br/>
-          Status:
-          <select value={this.state.status} onChange={this.onChangeStatus}>
-            <option>New</option>
-            <option>Open</option>
-            <option>Fixed</option>
-            <option>Closed</option>
-          </select>
-          <br/>
-          Owner: <input type="text" value={this.state.owner} onChange={this.onChangeOwner}/>
-          <br/>
-          Title: <input type="text" value={this.state.title} onChange={this.onChangeTitle}/>
-          <br/>
-          <button type="submit">Submit</button><Link to="/bugs">Back to bug list</Link>
-        </form>
+      <div style={{maxWidth: 600}}>
+        <Panel header={"Edit bug: " + this.props.params.id}>
+          <form onSubmit={this.submit}>
+            <Input type="select" label="Priority"
+              value={this.state.priority} onChange={this.onChangePriority}>
+              <option value="P1">P1</option>
+              <option value="P2">P2</option>
+              <option value="P3">P3</option>
+            </Input>
+            <Input type="select" label="Status" value={this.state.status} onChange={this.onChangeStatus}>
+              <option>New</option>
+              <option>Open</option>
+              <option>Closed</option>
+            </Input>
+            <Input type="text" label="Title" value={this.state.title} onChange={this.onChangeTitle}/>
+            <Input type="text" label="Owner" value={this.state.owner} onChange={this.onChangeOwner}/>
+            <ButtonToolbar>
+              <Button type="submit" bsStyle="primary">Submit</Button>
+              <Link className="btn btn-link" to="/bugs">Back</Link>
+            </ButtonToolbar>
+          </form>
+        </Panel>
+        {this.state.successVisible ? success : null}
       </div>
     );
   },
 
   getInitialState: function() {
-    return {};
+    return {successVisible: false};
   },
 
   componentDidMount: function() {
@@ -69,6 +78,13 @@ var BugEdit = React.createClass({
     this.setState({title: e.target.value});
   },
 
+  showSuccess: function() {
+    this.setState({successVisible: true});
+  },
+  dismissSuccess: function() {
+    this.setState({successVisible: false});
+  },
+
   submit: function(e) {
     e.preventDefault();
     var bug = {
@@ -84,6 +100,7 @@ var BugEdit = React.createClass({
       dataType: 'json',
       success: function(bug) {
         this.setState(bug);
+        this.showSuccess();
       }.bind(this),
     });
   }
