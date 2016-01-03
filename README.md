@@ -147,3 +147,6 @@ Use Material UI to polish the UI.
 
 ### 11.b.1 Get Started
 Create a simple RaisedButton to get started.
+
+### 11.b.2 Filter
+Convert the Filter section to Material UI.
