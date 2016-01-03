@@ -141,3 +141,9 @@ Create a new route and a new page for editing a record.
 
 ### 10.4 Links
 Create links from and to the two pages.
+
+## 11. React-Bootstrap
+Use React-Bootstrap to polish the UI.
+
+### 11.1 Get started
+Install and add a simple button.

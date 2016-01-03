@@ -1,5 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Button = require('react-bootstrap/lib/Button');
 
 var BugFilter = React.createClass({
   render: function() {
@@ -23,7 +24,7 @@ var BugFilter = React.createClass({
           <option value="P3">P3</option>
         </select>
         <br/>
-        <button onClick={this.submit}>Apply</button>
+        <Button bsStyle="primary" onClick={this.submit}>Search</Button>
       </div>
     )
   },
