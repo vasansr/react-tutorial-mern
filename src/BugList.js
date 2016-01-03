@@ -16,17 +16,24 @@ var BugFilter = require('./BugFilter');
 var BugAdd = require('./BugAdd');
 
 var BugRow = React.createClass({
+  getStyle: function(width, bug) {
+    var style = {height: 24};
+    if (width) style.width = width;
+    if (bug.priority == 'P1') style.color = 'red';
+    return style;
+  },
   render: function() {
     //console.log("Rendering BugRow:", this.props.bug);
+    var bug = this.props.bug;
     return (
       <TableRow>
-        <TableRowColumn style={{height: 24, width: 180}}>
-          <Link to={'/bugs/' + this.props.bug._id}>{this.props.bug._id}</Link>
+        <TableRowColumn style={this.getStyle(180, bug)}>
+          <Link to={'/bugs/' + bug._id}>{bug._id}</Link>
         </TableRowColumn>
-        <TableRowColumn style={{height: 24, width: 40}}>{this.props.bug.status}</TableRowColumn>
-        <TableRowColumn style={{height: 24, width: 40}}>{this.props.bug.priority}</TableRowColumn>
-        <TableRowColumn style={{height: 24, width: 60}}>{this.props.bug.owner}</TableRowColumn>
-        <TableRowColumn style={{height: 24}}>{this.props.bug.title}</TableRowColumn>
+        <TableRowColumn style={this.getStyle(40, bug)}>{bug.status}</TableRowColumn>
+        <TableRowColumn style={this.getStyle(40, bug)}>{bug.priority}</TableRowColumn>
+        <TableRowColumn style={this.getStyle(60, bug)}>{bug.owner}</TableRowColumn>
+        <TableRowColumn style={this.getStyle(undefined, bug)}>{bug.title}</TableRowColumn>
       </TableRow>
     )
   }
