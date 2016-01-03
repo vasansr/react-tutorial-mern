@@ -6,9 +6,10 @@ This is a tutorial to get started with React, using the MERN stack. You will
 not only learn React, but also associated environment and complimentary tools
 such as Mongo, Express, gulp etc.
 
-The complete step-by-step instructions will be available on [Hashnode](https://hashnode.com)
-in a story titled React Tutorial using MERN stack. I will update the actual link
-here once I am done publishing that story.
+In the unlikely event that you landed here first, the complete step-by-step
+instructions are available 
+[here on Hashnode](https://hashnode.com/post/react-tutorial-using-mern-stack-ciiyus9m700qqge53mer0isxz).
+Read and follow the tutorial there.
 
 ## 1. Hello World
 
