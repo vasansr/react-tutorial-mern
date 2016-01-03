@@ -147,3 +147,6 @@ Use React-Bootstrap to polish the UI.
 
 ### 11.1 Get started
 Install and add a simple button.
+
+### 11.2 Filter
+Convert the filter to React-Bootstrap.
