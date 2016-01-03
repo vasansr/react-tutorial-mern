@@ -152,4 +152,7 @@ Install and add a simple button.
 Convert the filter to React-Bootstrap.
 
 ### 11.3 Add Form
-Conver the Add form to React-Bootstrap.
+Convert the Add form to React-Bootstrap.
+
+### 11.4 Table
+Convert the Table to React-Bootstrap.
